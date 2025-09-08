@@ -3,15 +3,17 @@ import java.util.Map;
 
 public class PhoneBook {
     private Map<String, String> contacts = new HashMap<>();
+    private Map<String, String> numberToName = new HashMap<>();
     
     public int add(String name, String number) {
-        if (!contacts.containsKey(name)) {
-            contacts.put(name, number);
+        if (!nameToNumber.containsKey(name)) {
+            nameToNumber.put(name, number);
+            numberToName.put(number, name);
         }
-        return contacts.size();
+        return nameToNumber.size();
     }
 
     public String findByNumber(String number) {
-    return null;
+        return numberToName.get(number);
     }
 }
