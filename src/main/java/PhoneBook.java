@@ -22,5 +22,8 @@ public class PhoneBook {
     }
 
     public void printAllNames() {
+    for (String name : names) {
+            System.out.println(name);
+        }
     }
 }
