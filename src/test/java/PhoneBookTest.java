@@ -31,4 +31,15 @@ public class PhoneBookTest {
         assertEquals("456", phoneBook.findByName("Bob"));
         assertNull(phoneBook.findByName("Charlie"));
     }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Charlie", "789");
+        phoneBook.add("Alice", "123");
+        phoneBook.add("Bob", "456");
+        
+        System.out.println("Expected order: Alice, Bob, Charlie");
+        phoneBook.printAllNames();
+    }
 }
